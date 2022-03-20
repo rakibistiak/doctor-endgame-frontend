@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "DR. Snigdha",
+      "img": "https://preview.colorlib.com/theme/medicare/images/xstaff-4.jpg.pagespeed.ic.-dnw1UWm_Y.webp",
+      "designation": "Dental Hygienist"
+    },
+    {
+      "id": 2,
+      "name": "DR. Rakib",
+      "img": "https://preview.colorlib.com/theme/medicare/images/xstaff-2.jpg.pagespeed.ic.oztGsJ5WoE.webp",
+      "designation": "Orthopedic Surgeon"
+    },
+    {
+      "id": 3,
+      "name": "DR. Istiak",
+      "img": "https://preview.colorlib.com/theme/medicare/images/xstaff-3.jpg.pagespeed.ic.Fgk92-nbFh.webp",
+      "designation": "Health Care"
+    },
+    {
+      "id": 4,
+      "name": "DR. Sanjida",
+      "img": "https://preview.colorlib.com/theme/medicare/images/xstaff-1.jpg.pagespeed.ic.UQ0QPOtm9m.webp",
+      "designation": "Patient Services Manager"
+    }
+  ]

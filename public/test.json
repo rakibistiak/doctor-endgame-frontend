@@ -1,0 +1,62 @@
+[
+    {
+        "id":1,
+        "name": "gastric fluid analysis",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 50
+    },
+    {
+        "id":2,
+        "name": "ALT Blood Test",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 40
+    },
+    {
+        "id":3,
+        "name": "Appendicitis Tests",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 35
+    },
+    {
+        "id":4,
+        "name": "Bacteria Culture Test",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 55
+    },
+    {
+        "id":5,
+        "name": "Bilirubin in Urine",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 50
+    },
+    {
+        "id":6,
+        "name": "Chlamydia Test",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 56
+    },
+    {
+        "id":7,
+        "name": "Complete Blood Count",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 45
+    },
+    {
+        "id":8,
+        "name": "Diabetes Tests",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 8
+    },
+    {
+        "id":9,
+        "name": "Epithelial Cells in Urine",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 48
+    },
+    {
+        "id":10,
+        "name": "Fasting for a Blood Test",
+        "desc": "This is a list of medical tests and procedures used to obtain health information and diagnose pathological and nonpathological conditions of the human body. ",
+        "price": 90
+    }
+]

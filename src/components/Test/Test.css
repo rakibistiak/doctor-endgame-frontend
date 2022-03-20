@@ -1,0 +1,29 @@
+.test-row{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.paginationBtn{
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.paginationBtn a{
+    padding: 10px;
+    margin:10px;
+    border-radius: 5px;
+    border: 1px solid #3089FC;
+    color: #3089FC;
+    cursor: pointer;
+    text-decoration: none;
+}
+.paginationBtn a:hover{
+    color: #fff !important;
+    background-color: #3089FC;
+}
+.activeBtn a{
+    color: #fff !important;
+    background-color: #3089FC;
+}

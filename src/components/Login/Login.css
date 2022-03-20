@@ -1,0 +1,56 @@
+.sign{
+    margin-top: 100px;
+}
+.requried::after{
+    content: "*";
+    font-size: 20px;
+    color: red;
+}
+.login-row{
+    min-height:70vh;
+    margin-top:170px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 16px;
+    padding-left: 80px;
+}
+.login{
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+}
+.login:hover{
+    transform: scale(1.2);
+}
+.login-with{
+    position: relative;
+    top: 8px;
+}
+.google{
+    color: #E72734;
+}
+.facebook{
+    color: #3B5998;
+}
+@media only screen and (max-width:600px) {
+    .login-row{
+        width: 100vw;
+    }
+    .login-with{
+        display: none;
+    }
+    .login{
+        font-size: 30px;
+        cursor: pointer;
+        transition: transform 0.1s linear;
+        padding-bottom: 10px;
+    }
+    .login:hover{
+        transform: scale(1.2);
+    }
+    .form{
+        padding: 16px 0;
+    }
+    .log-img{
+        display: none;
+    }
+}
