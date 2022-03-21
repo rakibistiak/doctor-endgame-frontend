@@ -24,7 +24,7 @@ const Test = () => {
             <div className="test-row">
             {(tests.slice(pageVisited, pageVisited + testPerPage)).map(test => {
                 return (
-                        <Card style={{ width: '18rem' }} className='mx-2'>
+                        <Card key={test?.id} style={{ width: '18rem' }} className='mx-2'>
                             <Card.Body>
                                 <Card.Title>{test?.name}</Card.Title>
                                 <Card.Text>

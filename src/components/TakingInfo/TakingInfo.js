@@ -3,6 +3,8 @@ import { Col, Form, Row, Button, Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import './TakingInfo.css';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 const TakingInfo = () => {
 
     //change the title when change the route
@@ -13,65 +15,76 @@ const TakingInfo = () => {
     // Store info of patient
 
     const { name } = useParams();
+    const history = useHistory()
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register,reset, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+        axios.post('http://localhost:5000/apointmentinfo', data)
+                .then(data => {
+                    if (data) {
+                        alert("ApointMent Successfully Done");
+                        history.push('/home')
+                        reset();
+                    }
+                })
+    };
     return (
-            <Container className='d-flex justify-content-center align-items-center' style={{ marginTop: '100px', height: '60vh' }}>
-                <Form onSubmit={handleSubmit(onSubmit)}>
-                    <h1 className='text-center mb-4 info-title'> Fill up this form </h1>
-                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-                        <Form.Label column sm="2">Name</Form.Label>
-                        <Col sm="10">
-                            <Form.Control style={{ fontWeight: '700', color: 'cadetblue' }} plaintext readOnly defaultValue={name} />
-                        </Col>
-                    </Form.Group>
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label >Name</Form.Label>
-                            <Form.Control {...register("name")} type="text" placeholder="Enter Name" />
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridState">
-                            <Form.Label >Time</Form.Label>
-                            <Form.Select {...register("time")} defaultValue="Choose...">
-                                <option>10am</option>
-                                <option>2pm</option>
-                                <option>8pm</option>
-                            </Form.Select>
-                        </Form.Group>
-                    </Row>
-
-                    <Form.Group className="mb-3" controlId="formGridAddress1">
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control {...register("address")} placeholder="1234 Main St" />
+        <Container className='d-flex justify-content-center align-items-center' style={{ marginTop: '100px', height: '60vh' }}>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <h1 className='text-center mb-4 info-title'> Fill up this form </h1>
+                <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                    <Form.Label column sm="2">Name</Form.Label>
+                    <Col sm="10">
+                        <Form.Control style={{ fontWeight: '700', color: 'cadetblue' }} plaintext readOnly defaultValue={name} />
+                    </Col>
+                </Form.Group>
+                <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridEmail">
+                        <Form.Label >Name</Form.Label>
+                        <Form.Control {...register("name")} type="text" placeholder="Enter Name" />
                     </Form.Group>
 
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="formGridCity">
-                            <Form.Label >City</Form.Label>
-                            <Form.Control {...register("city")} />
-                        </Form.Group>
+                    <Form.Group as={Col} controlId="formGridState">
+                        <Form.Label >Time</Form.Label>
+                        <Form.Select {...register("time")} defaultValue="Choose...">
+                            <option>10am</option>
+                            <option>2pm</option>
+                            <option>8pm</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Row>
 
-                        <Form.Group as={Col} controlId="formGridState">
-                            <Form.Label >State</Form.Label>
-                            <Form.Select {...register("state")} defaultValue="Choose...">
-                                <option>Mirpur</option>
-                                <option>Dhanmondi</option>
-                            </Form.Select>
-                        </Form.Group>
+                <Form.Group className="mb-3" controlId="formGridAddress1">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control {...register("address")} placeholder="1234 Main St" />
+                </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridZip">
-                            <Form.Label >Zip</Form.Label>
-                            <Form.Control  {...register("zip")}/>
-                        </Form.Group>
-                    </Row>
+                <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridCity">
+                        <Form.Label >City</Form.Label>
+                        <Form.Control {...register("city")} />
+                    </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
-            </Container>
+                    <Form.Group as={Col} controlId="formGridState">
+                        <Form.Label >State</Form.Label>
+                        <Form.Select {...register("state")} defaultValue="Choose...">
+                            <option>Mirpur</option>
+                            <option>Dhanmondi</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridZip">
+                        <Form.Label >Zip</Form.Label>
+                        <Form.Control  {...register("zip")} />
+                    </Form.Group>
+                </Row>
+                {errors.exampleRequired && <span>This field is required</span>}
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+        </Container>
     );
 };
 

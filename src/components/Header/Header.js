@@ -15,7 +15,7 @@ const Header = () => {
         <div>
             <Navbar style={{ backgroundColor: '#E3E3E3' }} expand="lg" fixed='top' >
                 <Container>
-                    <Navbar.Brand> <NavHashLink to="/home#banner" style={{textDecoration:'none'}}><h2 className='logo'>MEDI<span>CARE</span></h2></NavHashLink></Navbar.Brand>
+                    <Navbar.Brand> <NavHashLink to="/home#banner" style={{ textDecoration: 'none' }}><h2 className='logo'>MEDI<span>CARE</span></h2></NavHashLink></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
 
@@ -37,7 +37,10 @@ const Header = () => {
 
                             {/* When User logged in "Logout button" when not Login & SignUp button */}
                             {user.displayName || user.email ?
-                                <Button className='auth-button' onClick={logOut}> Log out</Button>
+                                <div>
+                                    <NavLink activeStyle={activeStyle} className="nav-link mt-1" to='/dashboard'> Dashboard</NavLink>
+                                    <Button className='auth-button' onClick={logOut}> Log out</Button>
+                                </div>
                                 :
                                 <div style={{ padding: '8px' }}>
                                     <NavLink className="link" to='/login'> <Button className='auth-button'>Log in</Button></NavLink>

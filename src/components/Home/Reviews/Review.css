@@ -1,0 +1,37 @@
+.title{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 50px;
+    line-height: 63px;
+}
+.review-img{
+    max-width: 80px;
+    margin-right: 30px;
+}
+.review-desc{
+    color: #AEB0B4;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.rating span span{
+    margin-left: 2px;
+}
+.emptystar{
+    color: #FFCC00;
+    font-size: 30px;
+    margin-left: 0px;
+}
+.fillstar{
+    color: #FFCC00;
+    font-size: 30px;
+}
+@media only screen and (max-width:600px){
+    .title{
+        padding-top: 100px;
+        padding-bottom: 50px;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+    }
+}

@@ -13,6 +13,7 @@ import Registration from './components/Registration/Registration';
 import News from './components/News/News';
 import Contacts from './components/Contact/Contacts';
 import Test from './components/Test/Test';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -65,6 +66,9 @@ function App() {
               <Test></Test>
               <Footer></Footer>
             </Route>
+            <PrivateRoute path='/dashboard'>
+              <Dashboard />
+            </PrivateRoute>
 
 
             <Route path='*'>

@@ -3,6 +3,7 @@ import Doctors from '../../Doctors/Doctors';
 import Pricing from '../../Pricing/Pricing';
 import Test from '../../Test/Test';
 import Banner from '../Banner/Banner';
+import Reviews from '../Reviews/Reviews';
 import Services from '../Services/Services';
 const Home = () => {
     useEffect(()=>{
@@ -15,6 +16,7 @@ const Home = () => {
             <Test></Test>
             <Doctors></Doctors>
             <Pricing></Pricing>
+            <Reviews></Reviews>
         </div>
     );
 };
